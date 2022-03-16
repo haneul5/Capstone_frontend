@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #add myapp
+    'player',
+    'main_pages',
 ]
 
 MIDDLEWARE = [
@@ -105,13 +108,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/seoul'#UTC -> 서울로 수정
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False #서울 시간 맞추려고 FALSE로 바꿈
 
 
 # Static files (CSS, JavaScript, Images)
