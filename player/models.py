@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 from django.db import models
 
 class Post(models.Model):
@@ -14,3 +15,5 @@ class Post(models.Model):
 
     def __str__(self):
         return f'[{self.pk}]{self.title}'
+=======
+>>>>>>> 61dbd9e7ab7ae29e89713ab2ea32bc963d56f9d9
