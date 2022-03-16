@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import ListView , DetailView
+from .models import Post
 
-<<<<<<< HEAD
-# Create your views here.
-=======
-# Create your views here.
->>>>>>> 61dbd9e7ab7ae29e89713ab2ea32bc963d56f9d9
+class PostList(ListView):
+    model = Post
+    ordering = '-pk' #최신 글 순서대로
+
+class PostDetail(DetailView):
+    model = Post
