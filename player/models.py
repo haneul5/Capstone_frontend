@@ -6,6 +6,7 @@ from django.db import models
 
 class Post(models.Model):
     title = models.CharField(max_length=30)
+    hook_text = models.CharField(max_length=100, blank=True) #요약문
     content = models.TextField()
 
     head_video = models.FileField(upload_to = "Uploaded Files/", blank=True, null=True)
