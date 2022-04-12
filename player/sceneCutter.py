@@ -3,7 +3,7 @@ from cv2 import FORMATTER_FMT_NUMPY
 import numpy as np
 import os
 
-cap = cv2.VideoCapture('./video/news.mp4')    # 비디오 경로 수정 필요
+cap = cv2.VideoCapture('./video/doit.mp4')    # 비디오 경로 수정 필요
 totalFrameNum = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))    # 초당 프레임 수 
 # print("fps: " ,fps) 

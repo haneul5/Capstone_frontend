@@ -1,0 +1,14 @@
+﻿가뷰와 뷰그룹의 정의
+®Test [CWUsersimikej WA ndroidStudioP rojects WTest]-.. WappWsrcWmainWres WlayoutWactivitymain.xml[app]-A ndroidStudio-a
+
+®Test [CWUsers Wmikej WA ndroidStucioP rojects WTest]-.. WappWsrcWmain¥ Wres WlayoutWacti
+
+
+가XML 레이아웃의 구성
+®Test [C: WUsers Wmikej WA ndroidStudioP rojects WTest]-.. WappWsrcWmainWres WlayoutWacti
+가XML 레이아웃의 구성
+가XML 레이아웃의 구성
+®Test [C: WUsers Wmikej WA ndroidStucioP rojects WTest]-.. WappWsrcWmain¥ Wres WlayoutWacti
+그 XML 레이아웃의 구성
+®Test [C: WUsers Wmikej WA ndroidStudioP rojects WTest]-.. WappWsrcWmain¥ Wres WlayoutWacti
+®Test [CWUsersimikej WA ndroidStudioP rojects WTest]-.. WappWsrcWmain¥ Wres WlayoutWactivitymain.xml[app]-A ndroidStudio-a
