@@ -87,7 +87,11 @@
                 {% for p in post_list %}
                 <!-- Blog Post -->
                 <div class="card mb-4">
-                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                    {% if p.head_video %} <!-- 메인사진 지정 안해도 오류 안나게 해줌-->
+                    <img class="card-img-top" src="{{p.head_video.url}}" alt="{{p}} head_video">
+                    {% else %}
+                        <img class="card-img-top" src="https://picsum.photos/seed/{{p.id}}/800/200" alt="random_image">
+                    {% endif %}
                     <div class="card-body">
                         <h2 class="card-title">{{p.title}}</h2>
                         <p class="card-text">{{p.content}}</p>

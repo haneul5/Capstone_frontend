@@ -131,3 +131,6 @@ dmypy.json
 #pycharm
 .idea/
 migrations/
+_media/
+player/video/
+player/media/
