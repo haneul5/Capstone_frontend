@@ -15,7 +15,7 @@
                 <h1 class="fw-bolder mb-1">{{post.title}}</h1>
                 <h5 class="text-muted">{{ post.hook_text }}</h5> <!-- 요약문 -->
                 <!-- Post meta content-->
-                <div class="text-muted fst-italic mb-2">{{post.created_at}} by 작성자</div>
+                <div class="text-muted fst-italic mb-2">{{post.created_at}} by {{ post.author | upper }}</div>
                 <!-- Post categories-->
                 <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
                 <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
