@@ -1,9 +1,9 @@
 from unicodedata import category
 from django.shortcuts import render
-from django.views.generic import ListView , DetailView
+from django.views.generic import ListView , DetailView, CreateView
 from .models import Post, Category
 
-class PostList(ListView):
+class PostList(ListView): #포스트 목록 페이지
     model = Post
     ordering = '-pk' #최신 글 순서대로
 
@@ -14,7 +14,7 @@ class PostList(ListView):
         return context
 
 
-class PostDetail(DetailView):
+class PostDetail(DetailView): #포스트 상세 페이지
     model = Post
 
     def get_context_data(self, **kwargs):
@@ -23,7 +23,11 @@ class PostDetail(DetailView):
         context['no_category_post_count'] = Post.objects.filter(category=None).count() #카테고리 없는 미분류 항목
         return context
 
-def category_page(request, slug):
+class PostCreate(CreateView):
+    model = Post
+    fields = ['title', 'hook_text', 'content', 'head_image', 'head_video', 'category']
+
+def category_page(request, slug): #카테고리 분류 페이지
         #category = Category.objects.get(slug=slug)
         if slug == 'no_category' :
             category = '미분류'

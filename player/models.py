@@ -25,6 +25,7 @@ class Post(models.Model):
     hook_text = models.CharField(max_length=100, blank=True) #요약문
     content = models.TextField()
 
+    head_image = models.ImageField(upload_to = "Uploaded Files/", blank=True, null=True)
     head_video = models.FileField(upload_to = "Uploaded Files/", blank=True, null=True)
     
     #file_upload = models.FileField(upload_to= 'player/files/%Y/%m/%d/', blank=True)
