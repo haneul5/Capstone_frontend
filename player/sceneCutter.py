@@ -3,7 +3,7 @@ from cv2 import FORMATTER_FMT_NUMPY
 import numpy as np
 import os
 
-cap = cv2.VideoCapture('./video/haha.mp4')    # 비디오 경로 수정 필요
+cap = cv2.VideoCapture('./video/ras.mp4')    # 비디오 경로 수정 필요
 totalFrameNum = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))    # 초당 프레임 수 
 # print("fps: " ,fps) 
@@ -42,7 +42,7 @@ def getImage():
             psnrV = getPSNP(prevFrame, currFrame)
             # print("psnrV: ",psnrV)
             
-            if psnrV < CHANGE_DETECT_AUDIO:
+            if psnrV < CHANGE_DETECT_AUDIO and psnrV > 0:
                 changeFrame = currFrame.copy()
                 saveImage(changeFrame, frameNum / fps)
                 
