@@ -32,9 +32,10 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True) #작성시간 = 현재시간 고정
     update_at = models.DateTimeField(auto_now=True) #얘로 업데이트 시간 ㅇㅇ
 
-    author = models.ForeignKey(User, on_delete=models.CASCADE) # 작성자가 삭제되면 해당 게시물도 다 삭제하게 함
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL) # 작성자가 삭제되면 해당 게시물은 null
 
-    category = models.ForeignKey(Category, null = True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, null = True, blank=True, on_delete=models.SET_NULL) # 카테고리 지정 안하면 미분류
+
     def __str__(self):
         return f'[{self.pk}]{self.title}'
 

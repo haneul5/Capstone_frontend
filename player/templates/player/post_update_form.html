@@ -1,12 +1,11 @@
 {% extends 'player/base_full_width.html' %}
-
 {% load crispy_forms_tags %}
 {% block head_title %}
-Create Post - Meta Player
+Edit Post - Meta Player
 {% endblock %}
 
 {% block main_area %}
-<h1>Create New Post</h1>
+<h1>Edit Post</h1>
 <hr />
 <form method="post" enctype="multipart/form-data">{% csrf_token %}
     <table>
@@ -21,7 +20,6 @@ Create Post - Meta Player
             <label for="id_tags_str">Tags:</label>
             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
         </div>
-        <br/>
     </table>
     <button type="submit" class="btn btn-primary float-right">Submit</button>
 </form>
