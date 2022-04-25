@@ -31,13 +31,10 @@ def image_threshold(image):
 
 def range_scale(image):
     h,w = image.shape
-    result = image[0:140, 0:w]
-    # cv2.rectangle(result, (0,0),(100-1,w-1),(0,255,0))
-    # cv2.imshow("roi",result)
-    # cv2.waitKey(0)
+    rh = int(h*0.15)
+    result = image[0:rh, 0:w]
     return result
     
-
 def save_file(text, path):
     fix_text = spaceText(text)
     myText = open(path,'a',encoding='UTF-8-sig')
@@ -65,28 +62,34 @@ def save_file_2Line(text,path):
     global keyword, keyword_list
     list=text.split('\n')
     
-    
     if(len(list)==1):
-        if(len(list[0])>=10):
-            pass
-        else:
-            keyword = list[0]
+        keyword = list[0]
     elif (len(list)==2):
-        if(len(list[0])>=10):
-            keyword = list[1]
-        elif(len(list[1])>=10):
-            keyword = list[0]
-        else:
-            keyword = list[0]+list[1]
+        keyword = list[0]+list[1]
     else:
-        if(len(list[0])>=10):
-            keyword = list[1]
-        if(len(list[1])>=10):
-            keyword = list[0]
-        if(len(list[2])>=10):
-            keyword = list[0]+list[1]
-        else:
-            keyword = list[0]+list[1]+list[2]
+        keyword = list[0]+list[1]+list[2]
+    
+    # if(len(list)==1):
+    #     if(len(list[0])>=10):
+    #         pass
+    #     else:
+    #         keyword = list[0]
+    # elif (len(list)==2):
+    #     if(len(list[0])>=10):
+    #         keyword = list[1]
+    #     elif(len(list[1])>=10):
+    #         keyword = list[0]
+    #     else:
+    #         keyword = list[0]+list[1]
+    # else:
+    #     if(len(list[0])>=10):
+    #         keyword = list[1]
+    #     if(len(list[1])>=10):
+    #         keyword = list[0]
+    #     if(len(list[2])>=10):
+    #         keyword = list[0]+list[1]
+    #     else:
+    #         keyword = list[0]+list[1]+list[2]
 # keyword = list[0]+list[1]+list[2]
     
   
@@ -97,7 +100,9 @@ def save_file_2Line(text,path):
     myTextFile = open(path, 'a', encoding='UTF-8-sig')
     myTextFile.write(spacing+"\n")
     myTextFile.close()
-
+    keyword = ''
+    
+    
 def no_dup(my_dict):
     seen = []
     result = dict()
