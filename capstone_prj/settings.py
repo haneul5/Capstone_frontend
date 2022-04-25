@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    
+    #외부 라이브러리
+    'crispy_forms',
 
     #외부 library
     'crispy_forms',
